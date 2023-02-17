@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="4dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_title"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="@dimen/main_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_joueur1_tv"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginBottom="@dimen/game_margin"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.QuestionQuizz.EditText"
+        android:id="@+id/main_joueur1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_joueur1_tv"
+
+        android:layout_marginBottom="@dimen/main_margin_bottom"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginRight="@dimen/main_margin_left_right">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/main_joueur1_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_joueur2_tv"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginBottom="@dimen/game_margin"
+        android:layout_marginTop="@dimen/main_margin_top"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.QuestionQuizz.EditText"
+        android:id="@+id/main_joueur2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_joueur2_tv"
+
+        android:layout_marginBottom="@dimen/main_margin_bottom"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginRight="@dimen/main_margin_left_right">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/main_joueur2_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            style="@style/Widget.QuestionQuizz.Button"
+            android:id="@+id/main_start_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/main_margin_left_right"
+            android:layout_marginBottom="@dimen/main_margin_bottom"
+            android:text="@string/main_start_bt"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

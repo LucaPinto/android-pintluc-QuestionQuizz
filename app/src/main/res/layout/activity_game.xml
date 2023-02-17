@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/game_joueur1_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_joueur1_tv"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/game_margin">
+    </TextView>
+
+    <Button
+        style="@style/Widget.QuestionQuizz.Button"
+        android:id="@+id/game_joueur1_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/game_joueur1_tv"
+        android:layout_marginLeft="@dimen/game_margin_leftRight_bt"
+        android:layout_marginRight="@dimen/game_margin_leftRight_bt">
+    </Button>
+
+    <TextView
+        android:id="@+id/game_go1_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:rotation="180"
+        android:text="@string/game_go"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/game_joueur1_bt">
+    </TextView>
+
+    <TextView
+        android:id="@+id/game_score1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:rotation="180"
+        android:text="@string/game_score_tv"
+        android:textSize="64sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="32dp">
+    </TextView>
+
+    <Button
+        style="@style/Widget.QuestionQuizz.Button"
+        android:id="@+id/game_rejouer_bt"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="@string/game_rejouer_bt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/game_margin_leftRight_bt_rejouer_menu">
+    </Button>
+
+    <Button
+        style="@style/Widget.QuestionQuizz.Button"
+        android:id="@+id/game_menu_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_menu_bt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/game_margin_leftRight_bt_rejouer_menu">
+    </Button>
+
+    <TextView
+        android:id="@+id/game_score2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:text="@string/game_score_tv"
+        android:textSize="64sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/game_go2_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="@string/game_go"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/game_joueur2_bt"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+    <Button
+        style="@style/Widget.QuestionQuizz.Button"
+        android:id="@+id/game_joueur2_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/game_joueur2_tv"
+        android:layout_marginRight="@dimen/game_margin_leftRight_bt"
+        android:layout_marginLeft="@dimen/game_margin_leftRight_bt">
+    </Button>
+
+    <TextView
+        android:id="@+id/game_joueur2_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:rotation="180"
+        android:text="@string/main_joueur2_tv"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/game_margin">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style bouton -->
+    <style name="Widget.QuestionQuizz.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/teal_700</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- Style slider -->
+    <style name="Widget.QuestionQuizz.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="thumbColor">@color/gris_fonce</item>
+        <item name="trackColorInactive">@color/teal_200</item>
+        <item name="trackColorActive">@color/teal_700</item>
+        <item name="tickColorActive">@color/teal_200</item>
+    </style>
+
+    <!-- Style editText -->
+    <style name="Widget.QuestionQuizz.EditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">?attr/colorOnPrimary</item>
+        <item name="boxBackgroundMode">outline</item>
+    </style>
+</resources>

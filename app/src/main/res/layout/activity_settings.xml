@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/settings_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/setting_title_tv"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/main_margin_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settings_vitesse_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginTop="@dimen/settings_title_margin_bottom"
+        android:text="@string/setting_slider"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_title_tv" />
+
+    <com.google.android.material.slider.Slider
+        style="@style/Widget.QuestionQuizz.Slider"
+        android:id="@+id/settings_vitesse_sl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1.0"
+        android:valueTo="5.0"
+        android:stepSize="1.0"
+        android:value="2.0"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginRight="@dimen/main_margin_left_right"
+        app:layout_constraintTop_toBottomOf="@+id/settings_vitesse_tv" />
+
+    <Button
+        style="@style/Widget.QuestionQuizz.Button"
+        android:id="@+id/settings_valider_vitesse_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/main_margin_left_right"
+        android:text="@string/setting_valider_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_vitesse_sl" />
+
+    <TextView
+        android:id="@+id/settings_questions_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_questions_tv"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/main_margin_top"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        app:layout_constraintTop_toBottomOf="@+id/settings_valider_vitesse_bt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.QuestionQuizz.EditText"
+        android:id="@+id/settings_questions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Question ?"
+        android:layout_marginTop="@dimen/game_margin"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        android:layout_marginRight="@dimen/main_margin_left_right"
+        app:layout_constraintTop_toBottomOf="@+id/settings_questions_tv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/settings_questions_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/settings_question_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vrai"
+        android:layout_marginLeft="@dimen/main_margin_left_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_questions_layout" />
+
+    <Button
+        android:id="@+id/settings_valider_question_bt"
+        style="@style/Widget.QuestionQuizz.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_valider_bt"
+        android:layout_marginRight="@dimen/main_margin_left_right"
+        android:layout_marginTop="@dimen/game_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_questions_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

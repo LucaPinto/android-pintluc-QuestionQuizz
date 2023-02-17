@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_margin">30dp</dimen>
+    <dimen name="main_img_size">64dp</dimen>
+    <dimen name="main_margin_top">18dp</dimen>
+    <dimen name="main_margin_bottom">16dp</dimen>
+    <dimen name="main_margin_left_right">16dp</dimen>
+    <dimen name="game_margin">10dp</dimen>
+    <dimen name="game_margin_leftRight_bt">64dp</dimen>
+    <dimen name="game_margin_leftRight_bt_rejouer_menu">120dp</dimen>
+    <dimen name="game_margin_leftRight_score_tv">32dp</dimen>
+    <dimen name="settings_title_margin_bottom">48dp</dimen>
+</resources>
