@@ -7,23 +7,23 @@
     tools:context=".SettingsActivity">
 
     <TextView
+        style="@style/Widget.QuestionQuizz.TextViewTitle"
         android:id="@+id/settings_title_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/setting_title_tv"
-        android:textSize="30sp"
         android:layout_marginTop="@dimen/main_margin_top"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        style="@style/Widget.QuestionQuizz.TextView"
         android:id="@+id/settings_vitesse_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/main_margin_left_right"
         android:layout_marginTop="@dimen/settings_title_margin_bottom"
         android:text="@string/setting_slider"
-        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_title_tv" />
 
@@ -51,11 +51,11 @@
         app:layout_constraintTop_toBottomOf="@+id/settings_vitesse_sl" />
 
     <TextView
+        style="@style/Widget.QuestionQuizz.TextView"
         android:id="@+id/settings_questions_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/setting_questions_tv"
-        android:textSize="18sp"
         android:layout_marginTop="@dimen/main_margin_top"
         android:layout_marginLeft="@dimen/main_margin_left_right"
         app:layout_constraintTop_toBottomOf="@+id/settings_valider_vitesse_bt" />
@@ -76,7 +76,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:textAlignment="center"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

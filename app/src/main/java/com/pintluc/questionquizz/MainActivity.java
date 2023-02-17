@@ -5,6 +5,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,11 +31,41 @@ public class MainActivity extends AppCompatActivity {
         BT_start = findViewById(R.id.main_start_bt);
         ET_joueur1 = findViewById(R.id.main_joueur1_et);
         ET_joueur2 = findViewById(R.id.main_joueur2_et);
+
+        BT_start.setEnabled(false);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
+        ET_joueur1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                checkPlayerName();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        ET_joueur2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                checkPlayerName();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
 
         /**
          * Lors du click sur le bouton, récupère le nom des joueurs et lance le jeu
@@ -68,5 +100,9 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void checkPlayerName() {
+        BT_start.setEnabled(!ET_joueur1.getText().toString().isEmpty() && !ET_joueur2.getText().toString().isEmpty());
     }
 }
